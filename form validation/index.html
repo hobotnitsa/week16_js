@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <h3>Форма регистрации пользователя</h3>
+            <form action="#" name="form" class="form" novalidate>
+                <label for="inputName">Имя</label>
+                <input type="text" name="name" id="inputName" placeholder="Frodo" minlength="2" maxlength="20" required />
+                <span id="name-error"></span>
+
+                <br />
+                <label for="inputEmail">Email</label>
+                <input type="email" name="email" id="inputEmail" placeholder="frodo@gmail.com" required />
+                <span id="email-error"></span>
+
+                <br />
+                <label for="inputAge">Возраст</label>
+                <input type="text" name="age" id="inputAge" placeholder="28" required />
+                <span id="age-error"></span>
+
+                <br />
+                <label for="genderMale">Гендер</label>
+                <div>
+                    <input type="radio" name="gender" id="genderMale" value="Мужчина" required />
+                    <span>Мужчина</span>
+                    <input type="radio" name="gender" id="genderFemale" value="Женщина" required />
+                    <span>Женщина</span>
+                </div>
+                <span id="gender-error"></span>
+
+                <br />
+                <label for="selectProfession">Профессия</label>
+                <select name="profession" id="selectProfession" required>
+                    <option value="" disabled selected hidden>Выберите профессию</option>
+                    <option value="Врач">Врач</option>
+                    <option value="Программист">Программист</option>
+                    <option value="Учитель">Учитель</option>
+                    <option value="Дизайнер">Дизайнер</option>
+                    <option value="Инженер">Инженер</option>
+                    <option value="Продавец">Продавец</option>
+                    <option value="Другое">Другое</option>
+                </select>
+                <span id="profession-error"></span>
+
+                <br />
+                <label for="inputPassword">Пароль</label>
+                <div class="passwordInstr">пароль не менее 8 символов, должен включать как минимум одну заглавную букву, одну строчную и одну цифру</div>
+                <input
+                    type="password"
+                    name="password"
+                    id="inputPassword"
+                    placeholder="Пароль"
+                    minlength="8"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d!@#$%^&*\(\)]{8,}$"
+                    required
+                />
+                <span id="password-error"></span>
+
+                <br />
+                <label for="inputPasswordRepeat">Повторите пароль</label>
+                <input
+                    type="password"
+                    name="passwordRepeat"
+                    id="inputPasswordRepeat"
+                    placeholder="Повторите пароль"
+                    minlength="8"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d!@#$%^&*\(\)]{8,}$"
+                    required
+                />
+                <span id="passwordRepeat-error"></span>
+
+                <br />
+                <div>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="Согласие" required />
+                    <label for="inputCheckbox">Согласие с обработкой данных</label>
+                </div>
+                <span id="checkbox-error"></span>
+
+                <br />
+                <input type="submit" name="btn" value="Отправить" />
+            </form>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
